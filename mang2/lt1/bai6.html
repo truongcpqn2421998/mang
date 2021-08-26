@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let total = prompt('Nhập số lượng số nguyên trong mảng:')
+    let array = [];
+    for (let i=0;i<total;i++) {
+        let number = prompt('Nhập số nguyên ở vị trí '+i);
+        number=parseInt(number)
+        array[i]=number
+    }
+    let V=prompt('Nhập một số tùy ý:')
+    V=parseInt(V);
+    let sum=0;
+    for (let i=0;i<array.length;i++) {
+        if (array[i]===V) {
+           sum=1
+        }
+    }
+    if (sum!==0) {
+        document.write('V is in the array')
+    } else {
+        document.write('V is not in the array')
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let total = prompt('Nhập số lượng số nguyên trong mảng:')
+    let array = [];
+    for (let i=0;i<total;i++) {
+        let number = prompt('Nhập số nguyên ở vị trí '+i);
+        number=parseInt(number)
+        array[i]=number
+    }
+    document.write('Mảng trước khi thực hiện: '+ array+'<br>')
+    let V=prompt('Nhập một số tùy ý:')
+    V=parseInt(V);
+    for (let i=0;i<total;i++) {
+        if (array[i]===V) {
+            for (let j=i;j<(total-1);j++) {
+                array[j]=array[j+1]
+            }
+            array[total-1]=0
+        }
+    }
+    document.write('Mảng sau khi xong: '+array)
+</script>
+</body>
+</html>

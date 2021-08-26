@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let total = prompt('Nhập số lượng số nguyên trong mảng:')
+    let array = [];
+    for (let i=0;i<total;i++) {
+        let number = prompt('Nhập số nguyên ở vị trí '+i);
+        number=parseInt(number)
+        array[i]=number
+    }
+    document.write('Mảng ban đầu:'+ array+'<br>')
+    let array2=[]
+    let dem=0
+    for (let i=0;i<total;i++) {
+        let max=0
+        for (let j = 0; j < total; j++) {
+            if (array[j] > max) {
+                max = array[j]
+                dem = j
+            }
+        }
+        array[dem] = 0;
+        array2[i] = max
+    }
+    document.write('Mảng sau đó:'+array2)
+</script>
+</body>
+</html>

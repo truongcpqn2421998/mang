@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let totala = prompt('Nhập số lượng số nguyên trong mảng a:')
+    totala=parseInt(totala)
+    let Array_A = [];
+    for (let i=0;i<totala;i++) {
+        let number = prompt('Nhập số nguyên ở vị trí '+i+' trong mảng a');
+        number=parseInt(number)
+        Array_A[i]=number
+    }
+    document.write('mảng A là: '+Array_A+'<br>')
+    let totalb = prompt('Nhập số lượng số nguyên trong mảng b:')
+    let Array_B = [];
+    for (let i=0;i<totalb;i++) {
+        let number = prompt('Nhập số nguyên ở vị trí '+i+' trong mảng b');
+        number=parseInt(number)
+        Array_B[i]=number
+    }
+    document.write('mảng B là: '+Array_B+'<br>')
+    let Array_C =[];
+    Array_C=Array_A
+    for (let i=0;i<Array_B.length;i++) {
+        Array_C[10+i]=Array_B[i]
+    }
+    document.write('mảng C là: '+Array_C+'<br>')
+
+</script>
+</body>
+</html>

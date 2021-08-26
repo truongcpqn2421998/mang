@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tienganh=Array ('period','soldier','engineer','hydraulic','machine','positive','negative');
+    let tiengviet=Array ('thời kỳ','Người lính','Kỹ sư','Thủy lực','Cỗ máy','Tích cực','Tiêu cực');
+    let Search= prompt ('Nhập chữ cần dịch:')
+    let No=0
+    for (let i=0;i<(tienganh.length);i++) {
+        if (Search===tienganh[i]) {
+            document.write('Nghĩa của từ '+ tienganh[i]+' là '+tiengviet[i])
+            No=1
+        }
+    }
+    if (No===0) {
+        alert('Từ này không có giữ liệu hoặc nhập sai từ')
+    }
+</script>
+</body>
+</html>

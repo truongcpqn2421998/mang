@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let total = prompt('Nhập số lượng số nguyên trong mảng:')
+    let array = [];
+    for (let i=0;i<total;i++) {
+        let number = prompt('Nhập số nguyên ở vị trí '+i);
+        number=parseInt(number)
+        array[i]=number
+    }
+    let sum=0
+    for (let i=0;i<total;i++) {
+        if(array[i]<0) {
+            sum+=1;
+        }
+    }
+    document.write('Có '+sum+' số nguyên âm trong mảng')
+</script>
+</body>
+</html>

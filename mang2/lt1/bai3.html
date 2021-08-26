@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let total=prompt('Nhập số lượng muốn có trong mảng')
+    let array = [];
+    total=parseInt(total);
+    for (i=0;i<total;i++) {
+        let number=prompt('Nhâp giá trị ở vị trí '+i)
+        number=parseInt(number)
+        while (array.indexOf(number)!==(-1)) {
+            number=prompt('Nhâp lại đi')
+        }
+        array[i]=number;
+    }
+    let max = 0
+    let sum = 0
+    for (let i=0;i<total;i++) {
+        if (array[i]>max) {
+            max=array[i]
+        }
+        sum+=array[i]
+    }
+    document.write('Số lớn nhất trong mảng này là: ' +max+'<br>')
+    document.write('Giá trị trung bình trong mảng đó là: '+sum/total)
+</script>
+</body>
+</html>

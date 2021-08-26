@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array=[];
+    for (let i=0;i<10;i++) {
+        let number=prompt('Nhập số ở vị trí '+i);
+        number=parseInt(number)
+        array[i]=number
+    }
+    let count=0
+    for (let i=0;i<array.length;i++) {
+        if (array[i]>=10) {
+            document.write(array[i]+'<br>')
+            count++
+        }
+    }
+    document.write('Có '+count+' số nguyên lớn hơn hoặc bằng 10')
+</script>
+</body>
+</html>

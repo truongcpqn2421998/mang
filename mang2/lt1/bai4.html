@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let total = prompt('Nhập số lượng số nguyên trong mảng:')
+    let array = [];
+    for (let i=0;i<total;i++) {
+        let number = prompt('Nhập số nguyên ở vị trí '+i);
+        number=parseInt(number)
+        array[i]=number
+    }
+    document.write('mảng lúc đẩu có giá trị '+array+'<br>')
+    let first=0;
+    let last =array.length-1;
+    while (first<last) {
+        let b = array[first];
+        array[first]=array[last];
+        array[last]=b;
+        first++;
+        last--
+    }
+    document.write('Sau khi thực hiện chương trình mảng có giá trị '+ array)
+
+</script>
+</body>
+</html>
