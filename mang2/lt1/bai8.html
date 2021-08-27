@@ -15,16 +15,16 @@
     }
     document.write('Mảng ban đầu:'+ array+'<br>')
     let array2=[]
-    let dem=0
     for (let i=0;i<total;i++) {
-        let max=0
-        for (let j = 0; j < total; j++) {
+        let dem=0
+        let max=array[0]
+        for (let j = 0; j < array.length; j++) {
             if (array[j] > max) {
                 max = array[j]
-                dem = j
+                dem=j
             }
         }
-        array[dem] = 0;
+        array.splice(dem,1)
         array2[i] = max
     }
     document.write('Mảng sau đó:'+array2)

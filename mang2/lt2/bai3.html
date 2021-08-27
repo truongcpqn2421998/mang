@@ -6,6 +6,26 @@
 </head>
 <body>
 <script>
+    let total = prompt('Nhập số lượng giá trị trong mảng:')
+    let array = [];
+    for (let i=0;i<total;i++) {
+        let number = prompt('Nhập giá trị ở vị trí '+i);
+        array[i]=number
+    }
+    let sum=0
+    for (let i=0;i<array.length;i++) {
+        let test=array[i]
+        let dem =test.length
+        for (let j = 0; j < dem ; j++) {
+            for (let k = 0; k < 10; k++) {
+                if (test[j] == k) {
+                    sum += 1;
+                    break;
+                }
+            }
+        }
+    }
+    document.write(sum)
 
 </script>
 </body>

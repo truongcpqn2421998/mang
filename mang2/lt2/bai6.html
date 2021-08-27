@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let total = prompt('Nhập số lượng giá trị trong mảng:')
+    let array = [];
+    for (let i=0;i<total;i++) {
+        let number = prompt('Nhập giá trị ở vị trí '+i);
+        array[i]= number
+    }
+    for(let i=0;i<array.length;i++) {
+        if (array[i]==='-') {
+            array[i]='_';
+        }
+    }
+    document.write(array)
+</script>
+</body>
+</html>

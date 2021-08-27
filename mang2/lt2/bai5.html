@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chuoi_1= prompt('Nhập chuỗi 1:')
+    let chuoi_2= prompt('nhập chuỗi 2:')
+    function kt_lenght() {
+        if (chuoi_1.length===chuoi_2.length) {
+            return true
+        }
+        return false
+    }
+    function kt_kytu() {
+        for (let i=0;i<chuoi_1.length;i++) {
+            if (chuoi_1[i]!==chuoi_2[i]){
+                return false
+            }
+        }
+        return true
+    }
+    if (kt_lenght()) {
+        if (kt_kytu()) {
+            document.write('2 chuỗi giống nhau')
+        } else {
+            document.write('2 chuỗi không giống nhau')
+        }
+    }else {
+        document.write('2 chuỗi không giống nhau')
+    }
+
+
+</script>
+</body>
+</html>
