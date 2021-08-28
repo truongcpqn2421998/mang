@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let total = prompt('Nhập số lượng giá trị trong mảng:')
+    let array = [];
+    for (let i=0;i<total;i++) {
+        let number = prompt('Nhập giá trị ở vị trí '+i);
+        array[i]= number
+    }
+    let index = 0 ;
+    for (let i=0;i<array.length;i++) {
+        if (array[i]%2===0) {
+            index+=1;
+        }
+    }
+    document.write('Trong mảng có '+index+' số chẵn')
+</script>
+</body>
+</html>

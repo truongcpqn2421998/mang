@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let total = prompt('Nhập số lượng số trong mảng:')
+    let array = [];
+    for (let i=0;i<total;i++) {
+        let number = prompt('Nhập số ở vị trí '+i);
+        number=parseInt(number)
+        array[i]= number
+    }
+    function  checkPrime(n) {
+        if (n<2) return false;
+        for (let i=2;i<=Math.sqrt(n);i++) {
+            if (n%i===0) {
+                return false
+            }
+        }
+        return true;
+    }
+    let index=0;
+    let sum=0;
+    sum=parseInt(sum)
+    for (let i=0;i<array.length;i++) {
+        if (checkPrime(array[i])===true){
+            index++;
+            sum+=array[i];
+        }
+    }
+    document.write('Trong mảng có '+index+' số nguyên tố'+'<br>');
+    document.write('Tổng của các số nguyên tố bằng '+sum)
+</script>
+</body>
+</html>
